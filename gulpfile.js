@@ -32,6 +32,7 @@ gulp.task('start', function() {
 
 gulp.task('docs', function(){
     const css = gulp.src('dist/**/*').pipe(gulp.dest('docs/dist'))
+    const js = gulp.src('brt.js').pipe(gulp.dest('docs'))
     const html = gulp.src('index.html').pipe(gulp.dest('docs/'))
-    return css.on('end', () => html)
+    return Promise.all([css, js, html])
 })
