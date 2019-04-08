@@ -32,6 +32,12 @@ resTable.init({
 })
 ```
 
+## Dev
+
+1. clone this repo
+1. `npm i` this bad boy
+1. `gulp start` this gorgeous baby
+1. see magic happen inside browser
 
 ## Todos
  - Transpile JS with babel
