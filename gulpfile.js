@@ -10,7 +10,7 @@ sass.compiler = require('node-sass');
 gulp.task("transpile", function () {
     return gulp.src("brt.js")
         .pipe(babel())
-        .pipe(gulp.dest("dist/js/brt.js"));
+        .pipe(gulp.dest("dist/js"));
 });
 
 gulp.task('sass', function () {
