@@ -18,9 +18,10 @@ No special treatment needed on the mark-up, this library is built to work with t
 
 ## How to use
 
-Reference `brt.js` in your html
+Reference `brt.css` and `brt.js` in your html
 
 ```Html
+<link rel="stylesheet" href="path/to/brt.css">
 <script src="brt.js"></script>
 ```
 Then initiate it when DOM is ready

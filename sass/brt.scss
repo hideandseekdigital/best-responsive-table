@@ -1,37 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
-
-body{
-    padding: 20px 7%;
-}
-
-.test{
-    white-space: nowrap;
-    h2{
-        display: inline-block;
-    }
-}
-
-// generic table styles
-
-table{
-    border-spacing: 0px;
-    border-collapse: collapse;
-    th,td{
-        border: 1px solid #ddd;
-        padding: 10px;
-        white-space: normal;
-    }
-    tr{
-        &:nth-child(even){
-            background: #efefef;
-        }
-    }
-}
-
-
 $brt-label-width: 40%;
 $brt-table-width: 60%;
 
