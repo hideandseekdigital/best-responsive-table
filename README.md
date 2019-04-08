@@ -33,8 +33,8 @@ resTable.init({
 
 
 ## Todos
-
  - Transpile JS with babel
  - Refactor to handle responsiveness inside js
+ - Seperation of table styles
  - Add refresh() function to handle ajax content.
  - Make npm package.
