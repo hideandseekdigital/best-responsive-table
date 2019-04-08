@@ -28,3 +28,10 @@ gulp.task('start', function() {
 
     gulp.watch('./sass/*.scss', gulp.parallel('sass'));
 });
+
+
+gulp.task('docs', function(){
+    const css = gulp.src('dist/**/*').pipe(gulp.dest('docs/dist'))
+    const html = gulp.src('index.html').pipe(gulp.dest('docs/'))
+    return css.on('end', () => html)
+})

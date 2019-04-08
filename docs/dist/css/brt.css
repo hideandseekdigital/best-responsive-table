@@ -1,0 +1,80 @@
+.responsive-table-wrapper {
+  border-collapse: collapse; }
+  .responsive-table-wrapper * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  .responsive-table-wrapper .responsive-table-labels {
+    display: none; }
+  .responsive-table-wrapper th, .responsive-table-wrapper td,
+  .responsive-table-wrapper ul.table-labels li {
+    border: 1px solid #eee;
+    padding: 10px; }
+  .responsive-table-wrapper .responsive-td-heading {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0; }
+  .responsive-table-wrapper .responsive-table-navs {
+    display: none; }
+  @media (max-width: 1023px) {
+    .responsive-table-wrapper {
+      position: relative; }
+      .responsive-table-wrapper .responsive-table-navs {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 60%;
+        text-align: center;
+        z-index: 9;
+        display: block; }
+        .responsive-table-wrapper .responsive-table-navs .responsive-table-navs-control {
+          cursor: pointer; }
+        .responsive-table-wrapper .responsive-table-navs .responsive-table-navs-text {
+          margin: 0 10px; }
+      .responsive-table-wrapper .responsive-table-labels {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: auto;
+        -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+        z-index: 9; }
+        .responsive-table-wrapper .responsive-table-labels ul {
+          padding: 0;
+          margin: 0;
+          list-style: none; }
+          .responsive-table-wrapper .responsive-table-labels ul li {
+            font-weight: bold; }
+      .responsive-table-wrapper table {
+        position: relative;
+        z-index: 8;
+        display: block;
+        width: 60%;
+        margin-left: 40%;
+        white-space: nowrap;
+        overflow: hidden; }
+        .responsive-table-wrapper table thead {
+          display: none; }
+        .responsive-table-wrapper table tbody {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+          overflow: visible; }
+        .responsive-table-wrapper table tr, .responsive-table-wrapper table th, .responsive-table-wrapper table td {
+          display: block;
+          white-space: normal; }
+        .responsive-table-wrapper table tr {
+          min-width: 100%; }
+          .responsive-table-wrapper table tr:focus {
+            outline: 1px solid blue; } }
