@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 20px 7%;
+}
+
+.test{
+    white-space: nowrap;
+    h2{
+        display: inline-block;
+    }
+}
+
+// generic table styles
+
+table{
+    border-spacing: 0px;
+    border-collapse: collapse;
+    th,td{
+        border: 1px solid #ddd;
+        padding: 10px;
+        white-space: normal;
+    }
+    tr{
+        &:nth-child(even){
+            background: #efefef;
+        }
+    }
+}
+
+
+$brt-label-width: 40%;
+$brt-table-width: 60%;
+
+.responsive-table-wrapper{
+
+    border-collapse: collapse;
+    * {
+        box-sizing: border-box;
+    }
+
+
+    .responsive-table-labels{
+        display: none;
+    }
+
+    th,td,
+    ul.table-labels li{
+        border: 1px solid #eee;
+        padding: 10px;
+    }
+
+    .responsive-td-heading{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        white-space: nowrap;
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+        border: 0;
+    }
+
+    .responsive-table-navs{
+        display: none;
+    }
+
+
+    @media (max-width: 1023px)  {
+        position: relative;
+
+
+        .responsive-table-navs{
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: $brt-table-width;
+            text-align: center;
+            z-index: 9;
+            display: block;
+            .responsive-table-navs-control{
+                cursor: pointer;
+            }
+            .responsive-table-navs-text{
+                margin: 0 10px;
+            }
+        }
+
+        .responsive-table-labels{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $brt-label-width;
+            height: auto;
+            -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+            z-index: 9;
+            ul{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li{
+                    font-weight: bold;
+                }
+            }
+        }
+    
+        table{
+            position: relative;
+            z-index: 8;
+            display: block;
+            width: 60%;
+            margin-left: 40%;
+            white-space: nowrap;
+            overflow: hidden;
+            thead{
+                display: none;
+            }
+            tbody{
+                display: flex;
+                transition: all 0.5s;
+                overflow: visible;
+            }
+            tr,th,td{
+                display: block;
+                white-space: normal;
+            }
+            
+            tr{
+                min-width: 100%;
+                &:focus{
+                    outline: 1px solid blue;
+                }
+            }
+    
+        }
+    }
+}
