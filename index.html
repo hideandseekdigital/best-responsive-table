@@ -8,6 +8,8 @@
     <title>
         Responsive table
     </title>
+    <link rel="stylesheet" href="dist/css/brt.css">
+
     <style>
         * {
             box-sizing: border-box;
@@ -19,21 +21,18 @@
         }
 
         table{
-            border-spacing: 0px;
             border-collapse: collapse;
-            
         }
-        th,td{
-            border: 1px solid #ddd;
-            padding: 10px;
-            white-space: normal;
-        }
-        tr:nth-child(even){
-            background: #efefef;
+        table th{
+            border-bottom: 2px solid black;
         }
 
+        th,td,
+        ul.table-labels li{
+            border: 1px solid #eee;
+            padding: 10px;
+        }
     </style>
-    <link rel="stylesheet" href="dist/css/brt.css">
 </head>
 
 <body>

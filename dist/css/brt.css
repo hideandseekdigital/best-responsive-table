@@ -5,10 +5,6 @@
     box-sizing: border-box; }
   .responsive-table-wrapper .responsive-table-labels {
     display: none; }
-  .responsive-table-wrapper th, .responsive-table-wrapper td,
-  .responsive-table-wrapper ul.table-labels li {
-    border: 1px solid #eee;
-    padding: 10px; }
   .responsive-table-wrapper .responsive-td-heading {
     position: absolute;
     width: 1px;
@@ -29,7 +25,7 @@
         position: absolute;
         top: 100%;
         right: 0;
-        width: 60%;
+        width: 50%;
         text-align: center;
         z-index: 9;
         display: block; }
@@ -42,7 +38,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 40%;
+        width: 50%;
         height: auto;
         -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
         box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
@@ -57,8 +53,8 @@
         position: relative;
         z-index: 8;
         display: block;
-        width: 60%;
-        margin-left: 40%;
+        width: 50%;
+        margin-left: 50%;
         white-space: nowrap;
         overflow: hidden; }
         .responsive-table-wrapper table thead {
