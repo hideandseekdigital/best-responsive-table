@@ -1,5 +1,5 @@
-$brt-label-width: 40%;
-$brt-table-width: 60%;
+$brt-label-width: 50%;
+$brt-table-width: 100% - $brt-label-width;
 
 .responsive-table-wrapper{
 
@@ -13,11 +13,6 @@ $brt-table-width: 60%;
         display: none;
     }
 
-    th,td,
-    ul.table-labels li{
-        border: 1px solid #eee;
-        padding: 10px;
-    }
 
     .responsive-td-heading{
         position: absolute;
@@ -82,8 +77,8 @@ $brt-table-width: 60%;
             position: relative;
             z-index: 8;
             display: block;
-            width: 60%;
-            margin-left: 40%;
+            width: $brt-table-width;
+            margin-left: $brt-label-width;
             white-space: nowrap;
             overflow: hidden;
             thead{
