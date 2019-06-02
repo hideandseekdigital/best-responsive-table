@@ -9,7 +9,7 @@ Good UX for tables on mobile doesn't exist... Until now!
 - Accessible
 - Easily customisable
 - Work out of the box with wysiwyg editors
-- IE friedly
+- IE friendly
 
 ## Mark-up
 
@@ -21,8 +21,8 @@ No special treatment needed on the mark-up, this library is built to work with t
 Reference `brt.css` and `brt.js` in your html
 
 ```Html
-<link rel="stylesheet" href="path/to/brt.css">
-<script src="brt.js"></script>
+<link rel="stylesheet" href="dist/css/brt.css">
+<script src="dist/js/brt.js"></script>
 ```
 Then initiate it when DOM is ready
 
