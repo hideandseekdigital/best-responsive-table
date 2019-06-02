@@ -309,11 +309,14 @@
         </tbody>
     </table>
 
-    <script src="brt.js"></script>
     <script src="dist/js/brt.js"></script>
     <script>
-        var table1 = resTable.init({
+        var table1 = new resTable({
             table: document.getElementById('table')
+        })
+
+        var table2 = new resTable({
+            table: document.getElementById('table2')
         })
     </script>
 
