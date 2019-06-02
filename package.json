@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "transpile" : "gulp transpile"
+    "transpile": "gulp transpile"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,7 @@
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "autoprefixer": "^9.5.1",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^8.0.0",
