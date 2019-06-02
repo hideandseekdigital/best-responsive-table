@@ -8,6 +8,8 @@
     <title>
         Responsive table
     </title>
+    <link rel="stylesheet" href="dist/css/brt.css">
+
     <style>
         * {
             box-sizing: border-box;
@@ -19,21 +21,23 @@
         }
 
         table{
-            border-spacing: 0px;
             border-collapse: collapse;
-            
         }
         th,td{
             border: 1px solid #ddd;
             padding: 10px;
             white-space: normal;
         }
-        tr:nth-child(even){
-            background: #efefef;
+        table th{
+            border-bottom: 2px solid black;
         }
 
+        th,td,
+        ul.table-labels li{
+            border: 1px solid #eee;
+            padding: 10px;
+        }
     </style>
-    <link rel="stylesheet" href="dist/css/brt.css">
 </head>
 
 <body>
@@ -203,22 +207,9 @@
         </tbody>
     </table>
 
-
-
-
     <table id="table2">
         <thead>
             <tr>
-                <th>Date
-
-                </th>
-                <th>Area</th>
-                <th>Communities affected
-
-                </th>
-                <th>Further information
-
-                </th>
                 <th>Date
 
                 </th>
@@ -254,9 +245,6 @@
                     </ul>
                 </td>
                 <td>Changes to ABC transmission in Hobart</td>
-            </tr>
-
-            <tr>
                 <td>08/05/2018</td>
                 <td>Hobart</td>
                 <td>
@@ -281,10 +269,7 @@
                         <li>Lenah Valley</li>
                     </ul>
                 </td>
-                <td>Changes to ABC transmission in Hobart</td>
-            </tr>
-            <tr>
-                <td>08/05/2018</td>
+                <td>Changes to ABC transmission in Hobart</td><td>08/05/2018</td>
                 <td>Hobart</td>
                 <td>
                     <ul>
@@ -296,6 +281,7 @@
                 </td>
                 <td>Changes to ABC transmission in Hobart</td>
             </tr>
+
             <tr>
                 <td>08/05/2018</td>
                 <td>Hobart</td>
@@ -307,10 +293,7 @@
                         <li>Lenah Valley</li>
                     </ul>
                 </td>
-                <td>Changes to ABC transmission in Hobart</td>
-            </tr>
-            <tr>
-                <td>08/05/2018</td>
+                <td>Changes to ABC transmission in Hobart</td><td>08/05/2018</td>
                 <td>Hobart</td>
                 <td>
                     <ul>
@@ -322,80 +305,17 @@
                 </td>
                 <td>Changes to ABC transmission in Hobart</td>
             </tr>
-            <tr>
-                <td>08/05/2018</td>
-                <td>Hobart</td>
-                <td>
-                    <ul>
-                        <li>North Hobart</li>
-                        <li>Mt Stuart</li>
-                        <li>Newton</li>
-                        <li>Lenah Valley</li>
-                    </ul>
-                </td>
-                <td>Changes to ABC transmission in Hobart</td>
-            </tr>
-            <tr>
-                <td>08/05/2018</td>
-                <td>Hobart</td>
-                <td>
-                    <ul>
-                        <li>North Hobart</li>
-                        <li>Mt Stuart</li>
-                        <li>Newton</li>
-                        <li>Lenah Valley</li>
-                    </ul>
-                </td>
-                <td>Changes to ABC transmission in Hobart</td>
-            </tr>
-            <tr>
-                <td>08/05/2018</td>
-                <td>Hobart</td>
-                <td>
-                    <ul>
-                        <li>North Hobart</li>
-                        <li>Mt Stuart</li>
-                        <li>Newton</li>
-                        <li>Lenah Valley</li>
-                    </ul>
-                </td>
-                <td>Changes to ABC transmission in Hobart</td>
-            </tr>
-            <tr>
-                <td>08/05/2018</td>
-                <td>Hobart</td>
-                <td>
-                    <ul>
-                        <li>North Hobart</li>
-                        <li>Mt Stuart</li>
-                        <li>Newton</li>
-                        <li>Lenah Valley</li>
-                    </ul>
-                </td>
-                <td>Changes to ABC transmission in Hobart</td>
-            </tr>
-            <tr>
-                <td>08/05/2018</td>
-                <td>Hobart</td>
-                <td>
-                    <ul>
-                        <li>North Hobart</li>
-                        <li>Mt Stuart</li>
-                        <li>Newton</li>
-                        <li>Lenah Valley</li>
-                    </ul>
-                </td>
-                <td>Changes to ABC transmission in Hobart</td>
-            </tr>
+            
         </tbody>
     </table>
-    <script src="brt.js"></script>
-    <script>
 
-        resTable.init({
+    <script src="dist/js/brt.js"></script>
+    <script>
+        var table1 = new resTable({
             table: document.getElementById('table')
         })
-        resTable.init({
+
+        var table2 = new resTable({
             table: document.getElementById('table2')
         })
     </script>
