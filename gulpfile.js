@@ -1,11 +1,18 @@
 var gulp        = require('gulp');
+var babel       = require("gulp-babel");
 var sass        = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 
 sass.compiler = require('node-sass');
- 
+
+gulp.task("transpile", function () {
+    return gulp.src("brt.js")
+        .pipe(babel())
+        .pipe(gulp.dest("dist/js"));
+});
+
 gulp.task('sass', function () {
   return gulp.src('./sass/*.scss')
   .pipe(postcss([
