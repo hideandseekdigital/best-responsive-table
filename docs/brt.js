@@ -5,6 +5,11 @@ class resTable {
 
   constructor(options) {
     this.init(options)
+    window.addEventListener('resize', () => {
+      setTimeout(() => {
+        this.refresh()
+      }, 500)
+    })
   }
   // helper function to wrap an el with wrapper
   wrap(el, wrapper) {
@@ -51,7 +56,6 @@ class resTable {
     if (this.currentRow == this.totalRows && direction == 'next') {
       return
     }
-    console.log(this)
 
     // normal
     var diff = 0
@@ -220,6 +224,13 @@ class resTable {
       }
     }
     this.setEqualHeights(this.rows)
-    return this
+  }
+  refresh() {
+    this.setEqualHeights(this.rows)
+    console.log(window.innerWidth, this.breakPoint)
+    if (window.innerWidth >= this.breakPoint) {
+      // desktop
+      this.tbody.style.transform = 'translateX(0)'
+    }
   }
 }

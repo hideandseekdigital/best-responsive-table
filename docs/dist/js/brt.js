@@ -14,6 +14,8 @@ function () {
   // html element
   // if window width is less than or equal to this value, display mobile table.
   function resTable(options) {
+    var _this = this;
+
     _classCallCheck(this, resTable);
 
     _defineProperty(this, "table", {});
@@ -23,6 +25,11 @@ function () {
     _defineProperty(this, "breakPoint", null);
 
     this.init(options);
+    window.addEventListener('resize', function () {
+      setTimeout(function () {
+        _this.refresh();
+      }, 500);
+    });
   } // helper function to wrap an el with wrapper
 
 
@@ -77,9 +84,8 @@ function () {
 
       if (this.currentRow == this.totalRows && direction == 'next') {
         return;
-      }
+      } // normal
 
-      console.log(this); // normal
 
       var diff = 0;
 
@@ -246,7 +252,17 @@ function () {
       }
 
       this.setEqualHeights(this.rows);
-      return this;
+    }
+  }, {
+    key: "refresh",
+    value: function refresh() {
+      this.setEqualHeights(this.rows);
+      console.log(window.innerWidth, this.breakPoint);
+
+      if (window.innerWidth >= this.breakPoint) {
+        // desktop
+        this.tbody.style.transform = 'translateX(0)';
+      }
     }
   }]);
 
