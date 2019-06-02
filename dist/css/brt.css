@@ -1,4 +1,5 @@
 .responsive-table-wrapper {
+  margin-bottom: 40px;
   border-collapse: collapse; }
   .responsive-table-wrapper * {
     -webkit-box-sizing: border-box;
